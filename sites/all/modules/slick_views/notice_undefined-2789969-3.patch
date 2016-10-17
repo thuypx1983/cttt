@@ -1,0 +1,29 @@
+diff --git a/SlickViews.inc b/SlickViews.inc
+index 98faab6..057328b 100644
+--- a/SlickViews.inc
++++ b/SlickViews.inc
+@@ -288,14 +288,13 @@ class SlickViews extends views_plugin_style {
+ 
+       // Build the Slick attributes.
+       $is_asnavfor   = $is_asnavfor && $thumbs;
+-      $asnavfor_auto = $settings['asnavfor_auto'];
+ 
+       $settings['attributes']['class'][] = drupal_clean_css_identifier('slick--view--' . $view_name);
+       $settings['attributes']['class'][] = drupal_clean_css_identifier('slick--view--' . $view_name . '--' . $current);
+ 
+       if ($is_asnavfor) {
+         $attach['attach_skin_thumbnail'] = $settings['skin_thumbnail'];
+-        $settings['asnavfor_target']     = $asnavfor_auto ? "#{$thumb_id}-slider" : $settings['asnavfor_main'];
++        $settings['asnavfor_target']     = $settings['asnavfor_main'];
+       }
+ 
+       // Build the Slick grid only if having a reasonable amount of grid items.
+@@ -317,7 +316,7 @@ class SlickViews extends views_plugin_style {
+ 
+       if ($is_asnavfor) {
+         $settings['attributes']['id'] = $thumb_id;
+-        $settings['asnavfor_target']  = $asnavfor_auto ? "#{$id}-slider" : $settings['asnavfor_thumbnail'];
++        $settings['asnavfor_target']  = $settings['asnavfor_thumbnail'];
+         $settings['optionset']        = $asnavfor;
+         $settings['current_display']  = 'thumbnail';
+ 
