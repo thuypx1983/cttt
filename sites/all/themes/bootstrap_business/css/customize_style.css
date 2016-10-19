@@ -422,3 +422,45 @@ body.html{
 .bg-darker {
     background-color: #222222 !important;
 }
+
+
+.banner-item h4 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 5px 0 0;
+}
+.banner-item h4, .blog-item h1.content-block-title {
+    font-family: "Roboto Condensed",sans-serif;
+}
+.accordion-header, .banner-item .button, .banner-item h4, a.button {
+    text-transform: uppercase;
+}
+.banner .left-side-banner {
+    float: left;
+    width: 32%;
+}
+.banner-item.icon-on-left, .box-news .banner-item.icon-on-left {
+    padding-left: 80px;
+}
+a .banner-item {
+    color: #fff !important;
+}
+.banner-item {
+    background: #ccc none repeat scroll 0 0;
+    color: #fff;
+    padding: 10px 15px;
+    position: relative;
+    transition: background 0.3s ease 0s;
+}
+.banner-item p{
+    margin: 0px;
+}
+.banner-item.icon-on-left .fa {
+    left: 10px;
+    position: absolute;
+    top: 10px;
+    z-index: 100;
+}
+.banner-item .fa {
+    font-size: 42px;
+}
