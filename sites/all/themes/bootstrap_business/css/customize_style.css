@@ -594,3 +594,19 @@ a .banner-item {
     padding: 8px;
     color: white;
 }
+#header-top-right{
+    display: block;float: right;
+
+}
+#header-top-right .menu li{
+    display: block;
+    float: left;
+    padding-left: 15px;
+    border: none;
+}
+#header-top-right .menu li a{
+
+}
+#header-top-right .menu li a i{
+    margin-right: 5px;
+}
