@@ -43,7 +43,7 @@ h3 { font-size: 24px }
 
 h4 { font-size: 20px }
 
-h5 { font-size: 18px }
+h5 { font-size: 16px }
 
 h6 { font-size: 16px }
 
@@ -74,7 +74,8 @@ thead tr th, thead tr td, tbody tr th, tbody tr td { padding: 8px; line-height: 
 
 #header-top { background-color: #fcfcfc; border-bottom: 1px dashed #eaeaea; position: relative; z-index: 12; min-height: 50px; } 
 
-#header { background-color: #fcfcfc; border-bottom: 1px solid #eaeaea; position: relative; z-index: 5; padding: 40px 0; text-align: center; min-height: 130px; }
+#header { background-color: #fcfcfc; border-bottom: 1px solid #eaeaea; position: relative; z-index: 5;
+    padding: 0px 0; text-align: center;  }
 
 #main-navigation { background-color: #fcfcfc; position: relative; z-index: 11; -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.075), 0 10px 0 rgba(0,0,0,0.01);
 -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.075), 0 10px 0 rgba(0,0,0,0.01); box-shadow: 0 2px 4px rgba(0,0,0,0.075), 0 10px 0 rgba(0,0,0,0.01); }
@@ -108,9 +109,6 @@ display: none; }
 .glyphicon-block h4 { margin-top: 10px; }
 
 /*lists*/
-ul li { list-style-type: square; }
-
-ol li { list-style-type: decimal; }
 
 #header ul, #subfooter ul { text-align: left; }
 
@@ -136,9 +134,9 @@ ul.pager li a:hover, ul.pager li.pager-current { background-color: #444; border-
 /*menus*/
 ul.menu { margin: 0; padding: 0; }
 
-ul.menu li { list-style-position: inside; padding: 15px 0 15px 0; margin:0; border-bottom: 1px dashed #ddd;}
+ul.menu li { list-style-position: inside; padding: 10px 0 10px 0; margin:0; border-bottom: 1px dashed #ddd;}
 
-ul.menu li a { color: #999; font-size: 14px; line-height: 150%; display: inline-block; }
+ul.menu li a { color: #999;  display: inline-block; }
 
 ul.menu li a:hover, ul.menu li a.active { text-decoration: none;}
 
@@ -151,21 +149,8 @@ ul.menu li.expanded ul { padding-left: 25px; border-top: 1px dashed #ddd; margin
 /*horizontal menus*/
 #header ul.menu, #subfooter ul.menu, #top-content ul.menu, #bottom-content ul.menu { text-align: center; }
 
-#header-top ul.menu li, #header ul.menu li, #main-navigation ul.menu li, #top-content ul.menu li,
-#subfooter ul.menu li, #bottom-content ul.menu li { display: inline-block; background: none; list-style-type:none; border: none; padding: 0;}
 
 #header ul.menu li a, #top-content ul.menu li a, #bottom-content ul.menu li a { padding: 15px 20px; }
-
-#header-top ul.menu ul, #header ul.menu ul, #main-navigation ul.menu ul, #top-content ul.menu ul,
-#subfooter ul.menu ul, #bottom-content ul.menu ul { display: none; }
-
-/*header-top menu*/
-#header-top ul.menu li a { font-size: 13px; text-transform: capitalize;  padding: 16px 20px 16px; }
-
-/*main-navigation*/
-#main-navigation ul.menu li a { text-transform: uppercase; font-weight: 700; padding: 20px; }
-
-#main-navigation ul.menu ul li a, #header-top ul.menu ul li a  { padding: 15px 20px; text-transform: capitalize; font-weight: 400; font-size: 13px; border: 1px solid #eaeaea; border-top: none; line-height: 150%; }
 
 /*superfish support*/
 .block-superfish select { -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; border-width: 1px; width: 90%; }

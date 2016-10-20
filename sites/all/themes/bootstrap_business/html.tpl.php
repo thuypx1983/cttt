@@ -18,6 +18,9 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <?php print $scripts; ?>
+
+    <link rel="stylesheet" href="http://mmenu.frebsite.nl/mmenu/css/jquery.mmenu.all.css?v=5.7.1" />
+    <script src="http://mmenu.frebsite.nl/mmenu/js/jquery.mmenu.all.min.js?v=5.7.1"></script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">

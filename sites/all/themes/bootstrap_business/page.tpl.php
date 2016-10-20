@@ -83,44 +83,39 @@
 <?php endif; ?>
 
 <!-- header -->
-<header id="header" role="banner" class="clearfix">
+<div id="header" role="banner" class="clearfix">
     <div class="container">
 
         <!-- #header-inside -->
         <div id="header-inside" class="clearfix">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-3">
 
-                <?php if ($logo):?>
-                <div id="logo">
-                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /> </a>
+                    <?php if ($logo):?>
+                    <div id="logo">
+                    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /> </a>
+                    </div>
+                    <?php endif; ?>
+
+
                 </div>
-                <?php endif; ?>
+                <div class="col-md-6">
 
-                <?php if ($site_name):?>
-                <div id="site-name">
-                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+                    <?php if ($page['header']) :?>
+                        <?php print render($page['header']); ?>
+                    <?php endif; ?>
                 </div>
-                <?php endif; ?>
-                
-                <?php if ($site_slogan):?>
-                <div id="site-slogan">
-                <?php print $site_slogan; ?>
-                </div>
-                <?php endif; ?>
-                
-                <?php if ($page['header']) :?>
-                <?php print render($page['header']); ?>
-                <?php endif; ?>
-
-
+                <div class="col-md-3">
+                    <?php if ($page['header_left']) :?>
+                        <?php print render($page['header_left']); ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
         <!-- EOF: #header-inside -->
 
     </div>
-</header>
+</div>
 <!-- EOF: #header --> 
 
 <!-- #main-navigation --> 
@@ -129,20 +124,67 @@
 
         <!-- #main-navigation-inside -->
         <div id="main-navigation-inside" class="clearfix">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav role="navigation">
-                        <?php if ($page['navigation']) :?>
+            <div class="row hidden-md hidden-lg mobile-menu">
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                    <a href="#navigation_mobile"><i class="fa fa-list bg-black"></i></a>
+                </div>
+                <nav id ="navigation_mobile" role="navigation">
+                    <?php if ($page['navigation']) :?>
                         <?php print drupal_render($page['navigation']); ?>
-                        <?php else : ?>
+                    <?php else : ?>
 
                         <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('main-menu', 'menu'), ), 'heading' => array('text' => t('Main menu'), 'level' => 'h2', 'class' => array('element-invisible'), ), )); ?>
 
-                        <?php endif; ?>
-                    </nav>
+                    <?php endif; ?>
+                </nav>
+                <script type="text/javascript">
+                    (function($){
+                        $(function() {
+                            $('#navigation_mobile').mmenu({
+                                extensions	: [ 'effect-slide-menu', 'shadow-page', 'shadow-panels' ],
+                                counters	: true,
+                                navbar 		: {
+                                    title		: 'Gói dịch vụ cho thuê'
+                                },
+                                navbars		: [
+                                    {
+                                        position	: 'top',
+                                    }
+                                ]
+                            });
+                        });
+                    })(jQuery)
+
+
+                </script>
+            </div>
+            <div class="row hidden-sm hidden-xs">
+                <div class="sub-header col-md-3 col-sm-3 col-xs-12">
+                    <div class="row sidebar-box ">
+                        <div class="col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="menu-destop menu-box">
+                                <a href="#navigation" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <div class="sidebar-box-heading bg-red">
+                                        <h4>Danh mục cho thuê</h4>
+                                        <i class="fa fa-list"></i>
+                                    </div>
+                                </a>
+                                <nav id ="navigation" role="navigation">
+                                    <?php if ($page['navigation']) :?>
+                                    <?php print drupal_render($page['navigation']); ?>
+                                    <?php else : ?>
+
+                                    <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('main-menu', 'menu'), ), 'heading' => array('text' => t('Main menu'), 'level' => 'h2', 'class' => array('element-invisible'), ), )); ?>
+
+                                    <?php endif; ?>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
         <!-- EOF: #main-navigation-inside -->
 
     </div>
