@@ -3,7 +3,7 @@
 /* Reset unusual Firefox-on-Android default style, see https://github.com/necolas/normalize.css/issues/214*/
 @media (max-width: 991px) { .form-text, .form-textarea, .block-superfish select, .block-search .form-submit { background-image: none; } }
 
-body { color: #444; font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 160%; }
+body { color: #444;    font-family: "Roboto Condensed",sans-serif; font-size: 14px; line-height: 160%; }
 
 p { margin: 0 0 25px; padding: 0; }
 
@@ -97,7 +97,7 @@ display: none; }
 
 #top-content { background-color: #ffffff; padding: 40px 0 20px 0; }
 
-#main-content { padding: 60px 0 30px 0; }
+#main-content { padding: 10px  0 30px 0; }
 
 #main { padding: 0 0 20px; }
 

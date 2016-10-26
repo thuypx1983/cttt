@@ -1,3 +1,4 @@
+
 <?php if (theme_get_setting('scrolltop_display')): ?>
 <div id="toTop"><span class="glyphicon glyphicon-chevron-up"></span></div>
 <?php endif; ?>
@@ -89,7 +90,41 @@
         <!-- #header-inside -->
         <div id="header-inside" class="clearfix">
             <div class="row">
-                <div class="col-md-3">
+                <div class="row hidden-md hidden-lg mobile-menu col-xs-2 col-sm-2">
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <a href="#navigation_mobile"><i class="fa fa-align-justify bg-black"></i></a>
+                    </div>
+                    <nav id ="navigation_mobile" role="navigation">
+                        <?php if ($page['navigation']) :?>
+                            <?php print drupal_render($page['navigation']); ?>
+                        <?php else : ?>
+
+                            <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('main-menu', 'menu'), ), 'heading' => array('text' => t('Main menu'), 'level' => 'h2', 'class' => array('element-invisible'), ), )); ?>
+
+                        <?php endif; ?>
+                    </nav>
+                    <script type="text/javascript">
+                        (function($){
+                            $(function() {
+                                $('#navigation_mobile').mmenu({
+                                    extensions	: [ 'effect-slide-menu', 'shadow-page', 'shadow-panels' ],
+                                    counters	: true,
+                                    navbar 		: {
+                                        title		: 'Gói dịch vụ cho thuê'
+                                    },
+                                    navbars		: [
+                                        {
+                                            position	: 'top',
+                                        }
+                                    ]
+                                });
+                            });
+                        })(jQuery)
+
+
+                    </script>
+                </div>
+                <div class="col-md-3 col-xs-10 col-sm-10">
 
                     <?php if ($logo):?>
                     <div id="logo">
@@ -124,40 +159,7 @@
 
         <!-- #main-navigation-inside -->
         <div id="main-navigation-inside" class="clearfix">
-            <div class="row hidden-md hidden-lg mobile-menu">
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <a href="#navigation_mobile"><i class="fa fa-list bg-black"></i></a>
-                </div>
-                <nav id ="navigation_mobile" role="navigation">
-                    <?php if ($page['navigation']) :?>
-                        <?php print drupal_render($page['navigation']); ?>
-                    <?php else : ?>
 
-                        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('main-menu', 'menu'), ), 'heading' => array('text' => t('Main menu'), 'level' => 'h2', 'class' => array('element-invisible'), ), )); ?>
-
-                    <?php endif; ?>
-                </nav>
-                <script type="text/javascript">
-                    (function($){
-                        $(function() {
-                            $('#navigation_mobile').mmenu({
-                                extensions	: [ 'effect-slide-menu', 'shadow-page', 'shadow-panels' ],
-                                counters	: true,
-                                navbar 		: {
-                                    title		: 'Gói dịch vụ cho thuê'
-                                },
-                                navbars		: [
-                                    {
-                                        position	: 'top',
-                                    }
-                                ]
-                            });
-                        });
-                    })(jQuery)
-
-
-                </script>
-            </div>
             <div class="row hidden-sm hidden-xs">
                 <div class="sub-header col-md-3 col-sm-3 col-xs-12">
                     <div class="row sidebar-box ">
@@ -181,6 +183,9 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-9 col-lg-9 col-xs-12 col-sm-12 text-right">
+                    <?php print render($page['support']); ?>
                 </div>
             </div>
         </div>
@@ -424,8 +429,6 @@
                 <div class="col-md-12">
                     <!-- #subfooter-left -->
                     <div class="subfooter-area">
-                    <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('class' => array('menu', 'secondary-menu', 'links', 'clearfix')))); ?>                        
-
                     <?php if ($page['footer']):?>
                     <?php print render($page['footer']); ?>
                     <?php endif; ?>
