@@ -1,0 +1,50 @@
+<?php
+
+
+/**
+ * Implements hook_token_info().
+ */
+function phamxuanthuy_token_info() {
+    $info = array();
+    // Define a new token type.
+    $info['types']['product'] = array(
+        'name' => t('Product tokens'),
+        'description' => t('Product tokens.'),
+    );
+
+    // Define any new tokens.
+    $info['tokens']['product']['id'] = array(
+        'name' => t('Product id'),
+        'description' => t('Product id'),
+    );
+    return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function phamxuanthuy_tokens($type, $tokens, array $data = array(), array $options = array()) {
+    $replacements = array();
+
+    if(isset($_GET['pd'])){
+        $product=node_load($_GET['pd']);
+        // Loop through the available tokens.
+        foreach ($tokens as $name => $original) {
+            // Find our custom tokens by name.
+            switch ($name) {
+                case 'id':
+                    // Work out the value of our token.
+                    $value = $product->nid;
+                    // Give our token it's value!
+                    $replacements[$original] = $value;
+                    break;
+            }
+        }
+    }
+
+
+    return $replacements;
+}
+
+
+

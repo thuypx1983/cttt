@@ -1,0 +1,5 @@
+name = phamxuanthuy
+description = Sutunam overwrite some other module.
+project = phamxuanthuy
+core = 7.x
+package = phamxuanthuy

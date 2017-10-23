@@ -19,8 +19,8 @@
   <![endif]-->
   <?php print $scripts; ?>
 
-    <link rel="stylesheet" href="http://mmenu.frebsite.nl/mmenu/css/jquery.mmenu.all.css?v=5.7.1" />
-    <script src="http://mmenu.frebsite.nl/mmenu/js/jquery.mmenu.all.min.js?v=5.7.1"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.7.2/css/jquery.mmenu.all.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.7.2/js/jquery.mmenu.all.min.js"></script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
@@ -39,5 +39,10 @@
       js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <!-- addthis plugin -->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58a184ce0885d8d8"></script>
+
 </body>
 </html>

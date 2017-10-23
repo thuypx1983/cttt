@@ -146,7 +146,7 @@ ul.menu { margin: 0; padding: 0; }
 
 ul.menu li { list-style-position: inside; padding: 10px 0 10px 0; margin:0; border-bottom: 1px dashed #ddd;}
 
-ul.menu li a { color: #999;  display: inline-block; }
+ul.menu li a { color: #008a00;  display: inline-block; }
 
 ul.menu li a:hover, ul.menu li a.active { text-decoration: none;}
 
@@ -337,8 +337,9 @@ ul.links { padding: 0; margin: 0; list-style-position: inside; }
 ul.links li { margin: 0; }
 
 /* Breadcrumb */
-.breadcrumb { background-color: #fcfcfc; border: 1px solid #eaeaea; padding: 14px 20px; margin-bottom: 30px; -webkit-border-radius: 6px;
--moz-border-radius: 6px; border-radius: 6px; }
+.breadcrumb { background-color: #fcfcfc; border: 1px solid #eaeaea;
+    padding: 14px 20px; margin-bottom: 30px; -webkit-border-radius: 6px;
+-moz-border-radius: 6px; }
 
 .breadcrumb > li { margin: 0 2px 0 0; display: inline; }
 
