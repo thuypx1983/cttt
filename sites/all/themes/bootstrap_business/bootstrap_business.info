@@ -4,12 +4,10 @@ description = An extremely flexible, responsive theme with a wealth of regions. 
 version = VERSION
 core = 7.x
 
-stylesheets[all][] = css/style.css
-stylesheets[all][] = color/colors.css
-stylesheets[all][] = css/local.css
 stylesheets[all][] = css/font-awesome-4.6.3/css/font-awesome.css
-stylesheets[all][] = css/customize_style.css
+stylesheets[all][] = css/jquery.mmenu.all.css
 
+scripts[] = js/jquery.mmenu.all.min.js
 scripts[] = js/jquery.matchHeight.js
 scripts[] = js/scripts.js
 

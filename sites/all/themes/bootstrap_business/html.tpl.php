@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces;?>>
 <head profile="<?php print $grddl_profile; ?>">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <?php print $styles; ?>
 
   <?php if (theme_get_setting('responsive_respond','bootstrap_business')): global $base_path; global $base_root; ?>
@@ -19,8 +21,12 @@
   <![endif]-->
   <?php print $scripts; ?>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.7.2/css/jquery.mmenu.all.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.7.2/js/jquery.mmenu.all.min.js"></script>
+  <style type="text/css">
+    <?php echo file_get_contents(DRUPAL_ROOT.'/sites/all/themes/bootstrap_business/color/colors.css');?>
+    <?php echo file_get_contents(DRUPAL_ROOT.'/sites/all/themes/bootstrap_business/css/styles.min.css');?>
+    <?php echo file_get_contents(DRUPAL_ROOT.'/sites/all/themes/bootstrap_business/css/styles1.min.css');?>
+  </style>
+
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
@@ -30,6 +36,7 @@
   <?php print $page; ?>
   <?php print $page_bottom; ?>
 
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <!--- facebook plugin -->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {

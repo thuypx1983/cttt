@@ -249,9 +249,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'btwqhawi_tructuyen',
-      'username' => 'btwqhawihosting_tructuyen',
-      'password' => 'Mac17111991',
+      'database' => 'cttt',
+      'username' => 'root',
+      'password' => 'root',
       'host' => '127.0.0.1',
       'port' => '',
       'driver' => 'mysql',

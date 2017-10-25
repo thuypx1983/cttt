@@ -22,14 +22,14 @@ Number.prototype.formatMoney = function(c, d, t){
             target: null,
             remove: false
         });
-	$('.view-ho-so-nang-luc .views-row').matchHeight({
+	    $('.view-ho-so-nang-luc .views-row').matchHeight({
             byRow: false,
             property: 'height',
             target: null,
             remove: false
         });
 
-	$('.views-field-field-embed a').magnificPopup({
+	    $('.views-field-field-embed a').magnificPopup({
 		disableOn: 700,
 		type: 'iframe',
 		mainClass: 'mfp-fade',
@@ -39,11 +39,26 @@ Number.prototype.formatMoney = function(c, d, t){
 		fixedContentPos: false
 	    });
 	
-	$('.view-partner .views-field-field-image img').each(function(){
+	    $('.view-partner .views-field-field-image img').each(function(){
 		var cw = $(this).width();
 		$(this).css({
 		    'height': Math.round(cw*9/16) + 'px'
 		});
+            if ($(window).width() <= 768){
+                $('#navigation_mobile').mmenu({
+                    extensions	: [ 'effect-slide-menu', 'shadow-page', 'shadow-panels' ],
+                    counters	: true,
+                    navbar 		: {
+                        title		: 'Gói dịch vụ cho thuê'
+                    },
+                    navbars		: [
+                        {
+                            position	: 'top',
+                        }
+                    ]
+                });
+            }
+
 	})
 
 

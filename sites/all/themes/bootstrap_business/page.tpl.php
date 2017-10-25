@@ -103,26 +103,6 @@
 
                         <?php endif; ?>
                     </nav>
-                    <script type="text/javascript">
-                        (function($){
-                            $(function() {
-                                $('#navigation_mobile').mmenu({
-                                    extensions	: [ 'effect-slide-menu', 'shadow-page', 'shadow-panels' ],
-                                    counters	: true,
-                                    navbar 		: {
-                                        title		: 'Gói dịch vụ cho thuê'
-                                    },
-                                    navbars		: [
-                                        {
-                                            position	: 'top',
-                                        }
-                                    ]
-                                });
-                            });
-                        })(jQuery)
-
-
-                    </script>
                 </div>
                 <div class="col-md-3 col-xs-10 col-sm-10">
 
